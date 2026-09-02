@@ -1,0 +1,22 @@
+[
+  {
+    "startedDateTime": "2026-01-15T10:00:00.000Z",
+    "request": {"method": "GET", "url": "https://app.example.com/login", "headers": [], "queryString": [], "cookies": [], "postData": {"mimeType": "", "text": ""}},
+    "response": {"status": 200, "headers": [{"name": "Content-Type", "value": "text/html"}], "cookies": []}
+  },
+  {
+    "startedDateTime": "2026-01-15T10:00:15.000Z",
+    "request": {"method": "GET", "url": "http://app.example.com/redirect?url=https://evil.com", "headers": [], "queryString": [{"name": "url", "value": "https://evil.com"}], "cookies": [], "postData": {"mimeType": "", "text": ""}},
+    "response": {"status": 302, "headers": [{"name": "Location", "value": "https://evil.com"}, {"name": "Content-Type", "value": "text/html"}], "cookies": []}
+  },
+  {
+    "startedDateTime": "2026-01-15T10:00:16.000Z",
+    "request": {"method": "GET", "url": "https://app.example.com/sso", "headers": [], "queryString": [], "cookies": [], "postData": {"mimeType": "", "text": ""}},
+    "response": {"status": 301, "headers": [{"name": "Location", "value": "http://app.example.com/dashboard"}], "cookies": []}
+  },
+  {
+    "startedDateTime": "2026-01-15T10:00:17.000Z",
+    "request": {"method": "GET", "url": "http://app.example.com/dashboard", "headers": [], "queryString": [], "cookies": [], "postData": {"mimeType": "", "text": ""}},
+    "response": {"status": 302, "headers": [{"name": "Location", "value": "https://app.example.com/dashboard"}], "cookies": []}
+  }
+]
